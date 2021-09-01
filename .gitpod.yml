@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: spring-data-mongodb
+    init: |
+      cd todobackend-springdata && mvn clean package install -Dmaven.test.skip=true
+ports:
+  - port: 8080
+    onOpen: open-browser 
